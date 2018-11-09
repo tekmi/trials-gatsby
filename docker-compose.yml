@@ -1,0 +1,17 @@
+version: '2.1'
+
+#volumes:
+#  for_tomcat:
+#    driver_opts:
+#      type: none
+#      device: /Users/tekmi/PhpstormProjects/Devdru/magnolia/tomcat-dev
+#      o: bind
+
+services:
+  gatsby:
+    container_name: gatsby
+    build: .docker/gatsby/
+    volumes:
+      - ./gatsby/:/var/www
+    ports:
+      - 8100:8000
